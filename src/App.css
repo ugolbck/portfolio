@@ -1,7 +1,11 @@
 .app {
   font-family: 'Poppins';
   font-weight: 100;
-  background-color: #181818;
+  background-color: blue;
+}
+
+.navbar-height {
+  --height: 120px;
 }
 
 .nav-bar {
@@ -11,8 +15,12 @@
   background-color: white;
   color: #181818;
   padding: 0 120px 0 50px;
-  height: 120px;
+  height: var(--height, 120px);
   font-size: 22px;
+}
+
+.top-left-name {
+  font-weight: 600;
 }
 
 .nav-bar-right-items {
@@ -56,8 +64,12 @@
 
 
 .body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: 500vh;
+  background-color: rgb(194, 194, 194);
+}
+
+.landing-bloc {
+  height: calc(100vh - var(--height, 120px));
+
+  background-color: tomato;
 }

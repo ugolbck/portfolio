@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
+import Body from './components/body/Body';
 
 import "@fontsource/poppins";
 
@@ -8,7 +9,7 @@ function App() {
     <div className='app'>
       <NavBar />
       <div className='body'>
-        <p>App</p>
+        <Body />
       </div>
     </div>
   );
