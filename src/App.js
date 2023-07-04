@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from './components/navbar/NavBar';
-import Body from './components/body/Body';
+import NavBar from './components/navbar/NavBar.jsx';
+import Body from './components/body/Body.jsx';
 
 import "@fontsource/poppins";
 
