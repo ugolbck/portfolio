@@ -1,7 +1,6 @@
-import React from 'react';
-import HomeButton from './TopLeftName.jsx';
-import NavLinks from './Links.jsx';
-import Available from './Available.jsx';
+import HomeButton from './TopLeftName';
+import NavLinks from './Links';
+import Available from './Available';
 
 export default function NavBar() {
     return (

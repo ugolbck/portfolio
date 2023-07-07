@@ -1,7 +1,8 @@
 .app {
   font-family: 'Poppins';
   font-weight: 100;
-  background-color: blue;
+  background: #e6eaeb; background-image: radial-gradient(at 9.1% 27.6%, #94dfe3 0px, transparent 50%),radial-gradient(at 69.0% 15.0%, #d6d5ab 0px, transparent 50%),radial-gradient(at 78.9% 36.0%, #c27ad6 0px, transparent 50%),radial-gradient(at 67.1% 82.3%, hsl(3, 95%, 78%) 0px, transparent 50%),radial-gradient(at 17.2% 72.8%, #ede96b 0px, transparent 50%)
+
 }
 
 .navbar-height {
@@ -12,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   color: #181818;
   padding: 0 120px 0 50px;
   height: var(--height, 120px);
@@ -20,7 +21,8 @@
 }
 
 .top-left-name {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 25px;
 }
 
 .nav-bar-right-items {
@@ -65,27 +67,102 @@
 
 .body {
   height: 500vh;
-  background-color: rgb(194, 194, 194);
+  background-color: transparent;
 }
 
 .landing-bloc {
   height: calc(100vh - var(--height, 120px));
-  background-color: tomato;
   display: flex;
 }
 
 .main-bloc {
-  width: 60%;
+  width: 70%;
   height: 70%;
-  background-color: #38B124;
-  margin: 140px 30px 0 80px;
+  background-color: transparent;
+  margin: 100px 30px 0 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.main-bloc-text {
+  font-size: 90px;
+  font-weight: 600;
+  color: white;
+  height: 55%;
+}
+
+.main-bloc-text p {
+  margin: 0;
+  line-height: 120px;
+}
+
+#main-bloc-machine-learning {
+  max-width: max-content;
+  background: -webkit-linear-gradient(0deg, #CC00FF 0%, #1AC7FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#main-bloc-python-dev {
+  color: #181818;
+}
+
 .cta-buttons {
   display: flex;
-  justify-content: space-between;
-  width: 300px;
+  justify-content: space-evenly;
+  width: 54%;
+}
+
+.cta-main-button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 60px;
+  cursor: pointer;
+  background: linear-gradient(93deg, #C10DFF 0%, #48DCFF 100%);
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.cta-more-info-button {
+  color: black;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 10px 60px;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  font-size: 30px;
+  font-family: Poppins;
+  line-height: normal;
+}
+
+
+
+
+.top-to-btm{
+  position: relative;
+}
+.icon-position{
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+.icon-style{
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.icon-style:hover{
+  animation: none;
+  background: linear-gradient(93deg, #C10DFF 0%, #48DCFF 100%);
 }
