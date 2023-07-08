@@ -68,6 +68,8 @@
 .body {
   height: 500vh;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
 }
 
 .landing-bloc {

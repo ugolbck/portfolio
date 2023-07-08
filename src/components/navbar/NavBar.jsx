@@ -8,7 +8,7 @@ export default function NavBar() {
             <HomeButton />
             <div className='nav-bar-right-items'>
                 <Available />
-                <NavLinks />
+                <NavLinks/>
             </div>
         </div>
     )
