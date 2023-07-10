@@ -1,18 +1,27 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar';
-import Body from './components/body/Body';
 import ScrollToTop from './components/ScrollToTop';
+import LandingBloc from './components/body/LandingBloc';
+import AboutBloc from './components/body/AboutBloc';
 import React, { useRef } from 'react'
 import "@fontsource/poppins";
 
 function App() {
-  const aboutSection = useRef(null)
+  const aboutSectionRef = useRef();
 
   return (
     <div className='app'>
       <ScrollToTop />
-      <NavBar/>
-      <Body/>
+      <NavBar sectionRefList={[aboutSectionRef]}/>
+
+      <div className='body'>
+            <div className="landing-bloc navbar-height">
+                <LandingBloc sectionRefList={[aboutSectionRef]}/>
+            </div>
+            <div className="about-bloc">
+                <AboutBloc ref={aboutSectionRef}/>
+            </div>
+        </div>
     </div>
   );
 }

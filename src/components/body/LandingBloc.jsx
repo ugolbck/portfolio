@@ -1,9 +1,9 @@
 import MainBloc from "./MainBloc"
 
-export default function LandingBloc() {
+export default function LandingBloc({ sectionRefList }) {
     return (
         <>
-            <MainBloc />
+            <MainBloc sectionRefList={sectionRefList}/>
         </>
     )
 }
