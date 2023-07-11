@@ -48,7 +48,7 @@
 .available-rectangle {
   padding: 10px 10px 10px 10px;
   border-radius: 25px;
-  border: 1px solid #000;
+  border: 1px solid #292929;
   background: rgba(146, 146, 146, 0.11);
   backdrop-filter: blur(4.4px);
   display: flex;
@@ -113,7 +113,7 @@
 }
 
 #main-bloc-python-dev {
-  color: #181818;
+  color: #292929;
 }
 
 .cta-buttons {
@@ -135,6 +135,10 @@
   line-height: normal;
 }
 
+.cta-main-button:hover {
+  scale: 1.02;
+}
+
 .cta-more-info-button {
   color: black;
   border-radius: 10px;
@@ -146,6 +150,15 @@
   font-size: 30px;
   font-family: Poppins;
   line-height: normal;
+}
+
+
+.about-block {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;
 }
 
 

@@ -2,7 +2,7 @@ import { forwardRef } from "react"
 
 const AboutBloc = forwardRef((props, ref) => {
     return (
-        <section ref={ref}>
+        <section className="about-bloc" ref={ref}>
             <span>About me...</span>
         </section>
     );

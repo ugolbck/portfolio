@@ -18,9 +18,7 @@ function App() {
             <div className="landing-bloc navbar-height">
                 <LandingBloc sectionRefList={[aboutSectionRef]}/>
             </div>
-            <div className="about-bloc">
-                <AboutBloc ref={aboutSectionRef}/>
-            </div>
+            <AboutBloc ref={aboutSectionRef}/>
         </div>
     </div>
   );
