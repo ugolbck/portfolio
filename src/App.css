@@ -1,48 +1,57 @@
+html {
+  font-size: 30px;
+}
+
 .app {
   font-family: 'Poppins';
   font-weight: 100;
-  background: #e6eaeb; background-image: radial-gradient(at 9.1% 27.6%, #94dfe3 0px, transparent 50%),radial-gradient(at 69.0% 15.0%, #d6d5ab 0px, transparent 50%),radial-gradient(at 78.9% 36.0%, #c27ad6 0px, transparent 50%),radial-gradient(at 67.1% 82.3%, hsl(3, 95%, 78%) 0px, transparent 50%),radial-gradient(at 17.2% 72.8%, #ede96b 0px, transparent 50%)
-
+  background: #e6eaeb; background-image: radial-gradient(at 9.1% 27.6%, #94dfe3 0px, transparent 50%),radial-gradient(at 69.0% 15.0%, #d6d5ab 0px, transparent 50%),radial-gradient(at 78.9% 36.0%, #c27ad6 0px, transparent 50%),radial-gradient(at 67.1% 82.3%, hsl(3, 95%, 78%) 0px, transparent 50%),radial-gradient(at 17.2% 72.8%, #ede96b 0px, transparent 50%);
+  width: 100vw;
 }
 
-.navbar-height {
-  --height: 120px;
+.landing-bloc {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .nav-bar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
   color: #181818;
-  padding: 0 120px 0 50px;
-  height: var(--height, 120px);
   font-size: 22px;
+}
+
+.logo-top-left {
+  width: 40px;
+  height: 40px;
 }
 
 .top-left-name {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1rem;
 }
 
 .nav-bar-right-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
-  width: 500px;
+  font-size: 10px;
+  visibility: hidden;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 280px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #181818;
-  margin: 18px 0;
 }
 
 .available-rectangle {
@@ -54,13 +63,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 130px;
 }
 
 .available-text {
   font-size: 16px;
   font-weight: 600;
-  padding-right: 15px;
 }
 
 .available-dot {
@@ -71,38 +78,16 @@
 }
 
 
-.body {
-  height: 500vh;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-}
-
-.landing-bloc {
-  height: calc(100vh - var(--height, 120px));
-  display: flex;
-}
-
-.main-bloc {
-  width: 70%;
-  height: 70%;
-  background-color: transparent;
-  margin: 100px 30px 0 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
 .main-bloc-text {
-  font-size: 90px;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   height: 55%;
+  margin: 1em;
 }
 
 .main-bloc-text p {
   margin: 0;
-  line-height: 120px;
 }
 
 #main-bloc-machine-learning {
@@ -152,15 +137,70 @@
   line-height: normal;
 }
 
-
 .about-block {
   height: 100vh;
+  background-color: transparent;
   display: flex;
+  flex-direction: column;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-color: transparent;
 }
 
+.profile-pic {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.profile-desc {
+  width: 90%;
+  font-size: 20px;
+  font-weight: 500;
+  color: #292929;
+}
+
+.sep-line {
+  height: 1px;
+  background-color: #292929;
+  margin: auto;
+  width: 50%;
+}
+
+.about-cards {
+  padding: 70px 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  background: rgba( 255, 255, 255, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.25 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border-top: 1px solid rgba( 255, 255, 255, 0.6 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.6 );
+
+  width: 40%;
+  height: 200px;
+}
+
+
+.glassmorph {
+  background: rgba( 255, 255, 255, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 
 
@@ -175,15 +215,37 @@
 }
 .icon-style{
   background-color: transparent;
-  border: 2px solid #000;
+  border: 2px solid #222222;
   border-radius: 50%;
   height: 40px;
   width: 40px;
-  color: #000;
+  color: #222222;
   cursor: pointer;
   transition: all 1s ease-in-out;
 }
 .icon-style:hover{
   animation: none;
   background: linear-gradient(93deg, #C10DFF 0%, #48DCFF 100%);
+}
+
+
+/* Media Queries */
+
+
+@media screen and (max-width: 480px) {
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+
+@media screen and (max-width: 1200px) {
 }

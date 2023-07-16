@@ -1,25 +1,20 @@
 import './App.css';
-import NavBar from './components/navbar/NavBar';
 import ScrollToTop from './components/ScrollToTop';
 import LandingBloc from './components/body/LandingBloc';
-import AboutBloc from './components/body/AboutBloc';
-import React, { useRef } from 'react'
+import AboutBloc from './components/body/about/AboutBloc';
+import React, {useRef} from 'react'
 import "@fontsource/poppins";
 
 function App() {
   const aboutSectionRef = useRef();
+  const contactSectionRef = useRef();  // to add to the contact section below the about section
 
   return (
     <div className='app'>
       <ScrollToTop />
-      <NavBar sectionRefList={[aboutSectionRef]}/>
 
-      <div className='body'>
-            <div className="landing-bloc navbar-height">
-                <LandingBloc sectionRefList={[aboutSectionRef]}/>
-            </div>
-            <AboutBloc ref={aboutSectionRef}/>
-        </div>
+      <LandingBloc sectionRefList={[aboutSectionRef]}/>
+      <AboutBloc ref={aboutSectionRef}/>
     </div>
   );
 }
