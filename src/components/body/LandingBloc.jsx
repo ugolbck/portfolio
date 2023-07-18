@@ -1,13 +1,11 @@
 import MainBloc from "./MainBloc"
 import NavBar from "../navbar/NavBar"
 
-export default function LandingBloc({ sectionRefList }) {
+export default function LandingBloc() {
     return (
         <div className="landing-bloc">
-            <NavBar sectionRefList={sectionRefList}/>
-            <div className="main-bloc">
-                <MainBloc sectionRefList={sectionRefList}/>
-            </div>  
+            <NavBar/>
+            <MainBloc/>
         </div>
     )
 }

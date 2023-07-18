@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
 html {
-  font-size: 30px;
+  font-size: 15px;
 }
 
 .app {
-  font-family: 'Poppins';
-  font-weight: 100;
-  background: #e6eaeb; background-image: radial-gradient(at 9.1% 27.6%, #94dfe3 0px, transparent 50%),radial-gradient(at 69.0% 15.0%, #d6d5ab 0px, transparent 50%),radial-gradient(at 78.9% 36.0%, #c27ad6 0px, transparent 50%),radial-gradient(at 67.1% 82.3%, hsl(3, 95%, 78%) 0px, transparent 50%),radial-gradient(at 17.2% 72.8%, #ede96b 0px, transparent 50%);
+  font-family: 'Merriweather Sans', sans-serif;
+  background: #ede7de;
   width: 100vw;
 }
 
@@ -13,129 +14,101 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
 
 .nav-bar {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: transparent;
-  color: #181818;
-  font-size: 22px;
+  color: #4C6763;
+  font-size: 0.9em;
+  height: 10%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
-.logo-top-left {
-  width: 40px;
-  height: 40px;
-}
-
-.top-left-name {
+.main-bloc {
+  margin-top: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  font-size: 1.5em;
   font-weight: 500;
-  font-size: 1rem;
 }
-
-.nav-bar-right-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 10px;
-  visibility: hidden;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #181818;
-}
-
-.available-rectangle {
-  padding: 10px 10px 10px 10px;
-  border-radius: 25px;
-  border: 1px solid #292929;
-  background: rgba(146, 146, 146, 0.11);
-  backdrop-filter: blur(4.4px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.available-text {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.available-dot {
-  height: 15px;
-  width: 15px;
-  background-color: #38B124;
-  border-radius: 50%;
-}
-
 
 .main-bloc-text {
-  font-size: 1rem;
   font-weight: 600;
-  color: white;
-  height: 55%;
-  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 2em 0;
+  width: 90%;
 }
 
-.main-bloc-text p {
-  margin: 0;
+.main-bloc-text .main-title {
+  padding: 2rem;
+  color: #025A4E;
+  font-size: 3.5rem;
 }
 
-#main-bloc-machine-learning {
-  max-width: max-content;
-  background: -webkit-linear-gradient(0deg, #CC00FF 0%, #1AC7FE 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.main-bloc-text .main-subtitle {
+  color: #4C6763;
+  font-size: 1rem;
+  font-weight: 400;
+  word-spacing: 0.5rem;
+  line-height: 1.5rem;
 }
 
-#main-bloc-python-dev {
-  color: #292929;
-}
 
 .cta-buttons {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  width: 54%;
+  width: 80%;
 }
 
 .cta-main-button {
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 10px 60px;
   cursor: pointer;
-  background: linear-gradient(93deg, #C10DFF 0%, #48DCFF 100%);
-  font-size: 30px;
-  font-family: Poppins;
+  background-color: #025A4E;
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight: 500;
-  line-height: normal;
+  font-size: 1rem;
+  width: 100px;
+  height: 45px;
+  word-spacing: 0.2rem;
 }
 
 .cta-main-button:hover {
-  scale: 1.02;
+  scale: 1.05;
 }
 
 .cta-more-info-button {
-  color: black;
+  color: #025A4E;
   border-radius: 10px;
-  border: 1px solid #000;
-  padding: 10px 60px;
+  border: 1px solid #025A4E;
   font-weight: 500;
   cursor: pointer;
   background: transparent;
-  font-size: 30px;
-  font-family: Poppins;
-  line-height: normal;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  width: 100px;
+  height: 45px;
+  word-spacing: 0.2rem;
 }
+
+
+/* About page */
+
 
 .about-block {
   height: 100vh;
@@ -232,12 +205,7 @@ html {
 /* Media Queries */
 
 
-@media screen and (max-width: 480px) {
-  
-}
-
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 426px) {
   
 }
 
@@ -248,4 +216,11 @@ html {
 
 
 @media screen and (max-width: 1200px) {
+}
+
+
+/* Code bits for later */
+
+.future-bg-color {
+  background-color: #ede7de;
 }

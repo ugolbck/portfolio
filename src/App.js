@@ -11,10 +11,7 @@ function App() {
 
   return (
     <div className='app'>
-      <ScrollToTop />
-
-      <LandingBloc sectionRefList={[aboutSectionRef]}/>
-      <AboutBloc ref={aboutSectionRef}/>
+      <LandingBloc/>
     </div>
   );
 }

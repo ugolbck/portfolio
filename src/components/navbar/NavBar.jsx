@@ -1,17 +1,11 @@
-import HomeButton from './TopLeftName';
-import NavLinks from './Links';
-import Available from './Available';
-import bvb from '../../bvb.png';
 
-export default function NavBar({ sectionRefList }) {
+export default function NavBar() {
     return (
         <div className="nav-bar">
-            <img src={bvb} alt="logo" className="logo-top-left"/>
-            <HomeButton />
-            <div className='nav-bar-right-items'>
-                <Available />
-                <NavLinks mySectionRefList={sectionRefList}/>
-            </div>
+            <span>Home</span>
+            <span>About</span>
+            <span>Blog</span>
+            <span>Contact</span>
         </div>
     )
 }
