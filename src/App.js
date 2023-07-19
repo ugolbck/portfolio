@@ -1,17 +1,28 @@
 import './App.css';
-import ScrollToTop from './components/ScrollToTop';
-import LandingBloc from './components/body/LandingBloc';
-import AboutBloc from './components/body/about/AboutBloc';
-import React, {useRef} from 'react'
-import "@fontsource/poppins";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import React from 'react'
+
+import Layout from './components/Layout'
+import About from './components/About'
+import Home from './components/Home'
+import Contact from './components/Contact';
+import NoPage from './components/NoPage';
+
 
 function App() {
-  const aboutSectionRef = useRef();
-  const contactSectionRef = useRef();  // to add to the contact section below the about section
 
   return (
     <div className='app'>
-      <LandingBloc/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import scrollDownTo from "../scrollDownTo"
 
 export default function MoreInfoButton({ sectionRefList }) {
     return (

@@ -1,7 +1,7 @@
-import MainBlocText from "./MainBlocText"
-import Buttons from "./Buttons"
+import MainBlocText from './body/MainBlocText';
+import Buttons from './body/Buttons';
 
-export default function MainBloc() {
+export default function Home() {
     return (
         <div className="main-bloc">
             <MainBlocText />

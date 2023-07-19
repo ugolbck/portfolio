@@ -1,7 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
+:root {
+  --cta_button_width: 105px;
+  --cta_button_height: 50px;
+}
+
+
 html {
   font-size: 15px;
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.footer .footer-mountains {
+  width: 100vw;
+  bottom: 0;
+  position: absolute;
+  opacity: 0.8;
 }
 
 .app {
@@ -10,30 +31,26 @@ html {
   width: 100vw;
 }
 
-.landing-bloc {
-  height: 100vh;
+.app .nav-bar {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: transparent;
   color: #4C6763;
   font-size: 0.9em;
-  height: 10%;
-  width: 100vw;
+  height: 10vh;
+  width: 100%;
   position: fixed;
   top: 0;
+  gap: 3rem;
+}
+
+.app .nav-bar a {
+  text-decoration: none;
+  color: #4C6763;
 }
 
 .main-bloc {
-  margin-top: 10%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +65,7 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  padding: 2em 0;
+  padding: 3em 0 1.5em 0;
   width: 90%;
 }
 
@@ -62,8 +79,8 @@ html {
   color: #4C6763;
   font-size: 1rem;
   font-weight: 400;
-  word-spacing: 0.5rem;
-  line-height: 1.5rem;
+  word-spacing: 0.4rem;
+  line-height: 1.9rem;
 }
 
 
@@ -71,7 +88,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 80%;
+  width: 85%;
 }
 
 .cta-main-button {
@@ -83,8 +100,8 @@ html {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  width: 100px;
-  height: 45px;
+  width: var(--cta_button_width);
+  height: var(--cta_button_height);
   word-spacing: 0.2rem;
 }
 
@@ -101,8 +118,8 @@ html {
   background: transparent;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1rem;
-  width: 100px;
-  height: 45px;
+  width: var(--cta_button_width);
+  height: var(--cta_button_height);
   word-spacing: 0.2rem;
 }
 
