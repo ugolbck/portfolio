@@ -3,6 +3,7 @@
 :root {
   --cta_button_width: 105px;
   --cta_button_height: 50px;
+  --cta_button_border_radius: 12px;
 }
 
 /* Main elements */
@@ -30,7 +31,7 @@ html {
   align-items: center;
   background-color: transparent;
   color: #4C6763;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   height: 10vh;
   width: 100%;
   position: fixed;
@@ -38,12 +39,13 @@ html {
 }
 
 .layout .nav-bar-inner {
-  width: 70%;
+  width: 200px;
   height: 55%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 15%;
+  transition: all 0.2s linear;
+  padding: 0.2rem 1.2rem;
 }
 
 .layout .nav-bar-inner-border {
@@ -123,7 +125,7 @@ html {
 .main-bloc .cta-buttons .cta-main-button {
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--cta_button_border_radius);
   cursor: pointer;
   background-color: #025A4E;
   font-family: 'Merriweather Sans', sans-serif;
@@ -136,11 +138,12 @@ html {
 
 .main-bloc .cta-buttons .cta-main-button:hover {
   scale: 1.05;
+  transition: 0.4s;
 }
 
 .main-bloc .cta-buttons .cta-more-info-button {
   color: #025A4E;
-  border-radius: 10px;
+  border-radius: var(--cta_button_border_radius);
   border: 1px solid #025A4E;
   font-weight: 500;
   cursor: no-drop;
@@ -250,18 +253,34 @@ html {
 
 /* Media Queries */
 
+@media screen and (min-width: 376px) {
+  
+}
 
 @media screen and (min-width: 426px) {
-  
+
+}
+
+@media screen and (min-width: 768px) {
+  .layout .nav-bar-inner {
+    width: 320px;
+    height: 60%;
+    font-size: 1.25rem;
+  }
 }
 
 
-@media screen and (max-width: 1024px) {
-  
+@media screen and (min-width: 1024px) {
+
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1440px) {
+  .layout .nav-bar-inner {
+    width: 360px;
+    height: 62%;
+    font-size: 1.5rem;
+  }
 }
 
 
