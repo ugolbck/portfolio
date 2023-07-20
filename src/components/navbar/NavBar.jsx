@@ -10,10 +10,12 @@ export default function NavBar() {
     }, []);
 
     return (
-        <div className={`nav-bar ${scroll ? "nav-bar-border": ""}`}>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+        <div className="nav-bar">
+            <div className={`nav-bar-inner ${scroll ? "nav-bar-inner-border": ""}`}>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+            </div>
         </div>
     )
 }

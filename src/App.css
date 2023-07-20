@@ -21,7 +21,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300vh;
+  min-height: 150vh; /* good is 110vh ? */
 }
 
 .layout .nav-bar {
@@ -35,7 +35,27 @@ html {
   width: 100%;
   position: fixed;
   top: 0;
-  gap: 3rem;
+}
+
+.layout .nav-bar-inner {
+  width: 70%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+}
+
+.layout .nav-bar-inner-border {
+  background: rgba( 255, 255, 255, 0.5 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 15px );
+  border-radius: 50px;
+
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transition-property: backdrop-filter, box-shadow, background;
 }
 
 .layout .nav-bar a {
@@ -43,10 +63,6 @@ html {
   color: #4C6763;
 }
 
-.layout .nav-bar-border {
-  border-color: #025A4E;
-  border: 1px solid #025A4E;
-}
 
 .layout .footer {
   padding: 0;
@@ -69,6 +85,7 @@ html {
   background-color: transparent;
   font-size: 1.5em;
   font-weight: 500;
+  height: 95%;
 }
 
 .main-bloc .main-bloc-text {
