@@ -50,7 +50,7 @@ html {
 
 .layout .nav-bar-inner-border {
   background: rgba( 255, 255, 255, 0.5 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  box-shadow: 0 8px 10px 0 rgba( 31, 38, 135, 0.1 );
   backdrop-filter: blur( 15px );
   border-radius: 50px;
 
@@ -76,6 +76,23 @@ html {
   vertical-align: bottom;
 }
 
+/* Common elements */
+
+.main-title {
+  padding: 2rem;
+  color: #025A4E;
+  font-size: 3.5rem;
+}
+
+.main-subtitle {
+  color: #4C6763;
+  font-size: 1rem;
+  font-weight: 400;
+  word-spacing: 0.4rem;
+  line-height: 1.9rem;
+  padding-bottom: 0.7rem;
+}
+
 /* Outlet elements */
 
 /* Home page */
@@ -99,21 +116,6 @@ html {
   padding: 3em 0 1.5em 0;
   width: 90%;
 }
-
-.main-bloc .main-bloc-text .main-title {
-  padding: 2rem;
-  color: #025A4E;
-  font-size: 3.5rem;
-}
-
-.main-bloc .main-bloc-text .main-subtitle {
-  color: #4C6763;
-  font-size: 1rem;
-  font-weight: 400;
-  word-spacing: 0.4rem;
-  line-height: 1.9rem;
-}
-
 
 .main-bloc .cta-buttons {
   display: flex;
@@ -160,59 +162,69 @@ html {
 
 
 .about-block {
-  height: 100vh;
-  background-color: transparent;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  font-weight: 500;
 }
 
-.about-header {
+.about-block .pic-and-desc {
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: center;
   align-items: center;
-  background-color: transparent;
+  padding: 4rem 0 1.3rem 0;
+  width: 90%;
 }
 
-.profile-pic {
+.about-block .pic-and-desc .profile-pic {
   width: 30%;
   height: 30%;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
 }
 
-.profile-desc {
-  width: 90%;
-  font-size: 20px;
-  font-weight: 500;
-  color: #292929;
-}
-
-.sep-line {
-  height: 1px;
-  background-color: #292929;
-  margin: auto;
-  width: 50%;
-}
-
-.about-cards {
-  padding: 70px 50px;
+.about-block .values {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  width: 75%;
+  gap: 1.2rem;
 }
 
-.card {
+.about-block .values .value-card {
   background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.25 );
-  backdrop-filter: blur( 5px );
-  -webkit-backdrop-filter: blur( 5px );
-  border-radius: 10px;
+  box-shadow: 2px 2px 10px 0 rgba( 31, 38, 135, 0.1);
+  border-radius: 8px;  
   border-top: 1px solid rgba( 255, 255, 255, 0.6 );
   border-left: 1px solid rgba( 255, 255, 255, 0.6 );
 
-  width: 40%;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  padding: 1em;
 }
+
+.about-block .values .value-card .value-title {
+  font-size: 1.5rem;
+  color: #025A4E;
+  padding-bottom: 0.7rem;
+}
+
+.about-block .values .value-card .value-description {
+  color: #4C6763;
+  font-size: 0.75rem;
+  font-weight: 200;
+  word-spacing: 0.3rem;
+  line-height: 1.2rem
+}
+
+
 
 
 .glassmorph {

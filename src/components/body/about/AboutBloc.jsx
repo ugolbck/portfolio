@@ -2,9 +2,9 @@ import { forwardRef } from "react"
 import photo from "../../../photo.jpeg"
 import AboutCards from "./AboutCards";
 
-const AboutBloc = forwardRef((props, ref) => {
+export default function AboutBloc() {
     return (
-        <section className="about-bloc" ref={ref}>
+        <div className="about-bloc">
             <div className="about-header">
                 <img src={photo} className="profile-pic"></img>
                 <div className="profile-desc">
@@ -15,8 +15,6 @@ const AboutBloc = forwardRef((props, ref) => {
             </div>
             <div className="sep-line"></div>
             <AboutCards />
-        </section>
+        </div>
     );
-});
-
-export default AboutBloc;
+};
