@@ -4,6 +4,7 @@
   --cta_button_width: 105px;
   --cta_button_height: 50px;
   --cta_button_border_radius: 12px;
+  --about_width: 80%;
 }
 
 /* Main elements */
@@ -79,7 +80,7 @@ html {
 /* Common elements */
 
 .main-title {
-  padding: 2rem;
+  padding: 2rem 1rem;
   color: #025A4E;
   font-size: 3.5rem;
 }
@@ -91,6 +92,15 @@ html {
   word-spacing: 0.4rem;
   line-height: 1.9rem;
   padding-bottom: 0.7rem;
+}
+
+.about-card {
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 2px 2px 10px 0 rgba( 31, 38, 135, 0.1);
+  border-radius: 8px;  
+  border-top: 1px solid rgba( 255, 255, 255, 0.6 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.6 );
+  padding: 1em;
 }
 
 /* Outlet elements */
@@ -144,17 +154,20 @@ html {
 }
 
 .main-bloc .cta-buttons .cta-more-info-button {
-  color: #025A4E;
   border-radius: var(--cta_button_border_radius);
   border: 1px solid #025A4E;
-  font-weight: 500;
-  cursor: no-drop;
+  cursor: pointer;
   background: transparent;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1rem;
   width: var(--cta_button_width);
   height: var(--cta_button_height);
+  text-decoration: none;
+  color: #025A4E;
   word-spacing: 0.2rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -167,6 +180,8 @@ html {
   align-items: center;
   background-color: transparent;
   font-weight: 500;
+  gap: 2rem;
+  padding: 0 0 4rem 0;
 }
 
 .about-block .pic-and-desc {
@@ -176,8 +191,8 @@ html {
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  padding: 4rem 0 1.3rem 0;
-  width: 90%;
+  padding: 4rem 0 0rem 0;
+  width: var(--about_width);
 }
 
 .about-block .pic-and-desc .profile-pic {
@@ -188,35 +203,33 @@ html {
   margin-bottom: 2rem;
 }
 
-.about-block .values {
+.about-block .pic-and-desc .about-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-block .pic-and-desc .values {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 75%;
-  gap: 1.2rem;
+  gap: 1.3rem;
+  padding-top: 1.3rem;
 }
 
-.about-block .values .value-card {
-  background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 2px 2px 10px 0 rgba( 31, 38, 135, 0.1);
-  border-radius: 8px;  
-  border-top: 1px solid rgba( 255, 255, 255, 0.6 );
-  border-left: 1px solid rgba( 255, 255, 255, 0.6 );
-
+.about-block .pic-and-desc .values .value-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: left;
-  padding: 1em;
+  justify-content: flex-start;
 }
 
-.about-block .values .value-card .value-title {
+.about-block .pic-and-desc .values .value-card .value-title {
   font-size: 1.5rem;
   color: #025A4E;
   padding-bottom: 0.7rem;
 }
 
-.about-block .values .value-card .value-description {
+.about-block .pic-and-desc .values .value-card .value-description {
   color: #4C6763;
   font-size: 0.75rem;
   font-weight: 200;
@@ -224,7 +237,86 @@ html {
   line-height: 1.2rem
 }
 
+.about-block .exp-and-proj {
+  width: var(--about_width);
+}
 
+.about-block .exp-and-proj .experience h2 {
+  color: #025A4E;
+  font-size: 2rem;
+  padding-bottom: 0.7rem;
+}
+
+.about-block .exp-and-proj .experience .experience-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  gap: 1.3rem;
+}
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header .experience-card-header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header .experience-card-header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 0.25rem;
+  font-size: 0.8rem;
+  width: 40%;
+  color: #4C6763;
+}
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header .experience-card-header-left h3 {
+  font-size: 1.5rem;
+  color: #025A4E;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header .experience-card-header-left a {
+  color: #4C6763;
+  font-size: 0.9rem;
+  font-weight: 200;
+  word-spacing: 0.3rem;
+  margin: 0;
+  line-height: 1.2rem;
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  word-spacing: 0.2rem;
+}
+
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header .experience-card-header-left h5 {
+  color: #4C6763;
+  font-size: 0.75rem;
+  font-weight: 200;
+  word-spacing: 0.3rem;
+  margin: 0;
+  line-height: 1.2rem;
+}
+
+.about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-body {
+  color: #4C6763;
+  font-size: 0.75rem;
+  font-weight: 200;
+  word-spacing: 0.3rem;
+  line-height: 1.2rem;
+  text-align: left;
+}
 
 
 .glassmorph {
@@ -265,12 +357,27 @@ html {
 
 /* Media Queries */
 
+@media screen and (max-width: 350px) {
+  .about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .about-block .exp-and-proj .experience .experience-cards .experience-card .experience-card-header .experience-card-header-right {
+    align-items: flex-start;
+    padding: 0.7rem 0
+  }
+}
+
 @media screen and (min-width: 376px) {
   
 }
 
 @media screen and (min-width: 426px) {
-
+  .about-block .pic-and-desc {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -278,6 +385,26 @@ html {
     width: 320px;
     height: 60%;
     font-size: 1.25rem;
+  }
+  
+  .about-block {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 5rem;
+  }
+
+  .about-block .exp-and-proj .experience h2 {
+    margin-top: 2rem;
+  }
+
+  .about-block .pic-and-desc {
+    padding: 0;
+  }  
+
+  .about-block .pic-and-desc .values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 }
 

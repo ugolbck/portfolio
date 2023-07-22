@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 
 export default function MoreInfoButton({ sectionRefList }) {
     return (
         <>
-            <button className="cta-more-info-button">More Info</button>
+            <Link to={"/"} className="cta-more-info-button">More Info</Link>
         </>
     )
 }
