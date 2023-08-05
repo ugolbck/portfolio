@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Merriweather+Sans&display=swap');
 
 :root {
   --cta_button_width: 105px;
@@ -16,14 +17,13 @@ html {
 .app {
   font-family: 'Merriweather Sans', sans-serif;
   background: #ede7de;
-  width: 100vw;
 }
 
 .layout {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 150vh; /* good is 110vh ? */
+  min-height: 110vh; /* good is 110vh ? */
 }
 
 .layout .nav-bar {
@@ -40,7 +40,7 @@ html {
 }
 
 .layout .nav-bar-inner {
-  width: 200px;
+  width: 150px;
   height: 55%;
   display: flex;
   justify-content: space-between;
@@ -83,6 +83,8 @@ html {
   padding: 2rem 1rem;
   color: #025A4E;
   font-size: 3.5rem;
+  font-family: 'Galada', cursive;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .main-subtitle {
@@ -382,24 +384,15 @@ html {
 
 @media screen and (min-width: 768px) {
   .layout .nav-bar-inner {
-    width: 320px;
+    width: 180px;
     height: 60%;
     font-size: 1.25rem;
-  }
-  
-  .about-block {
-    flex-direction: row;
-    align-items: flex-start;
-    padding-top: 5rem;
   }
 
   .about-block .exp-and-proj .experience h2 {
     margin-top: 2rem;
   }
 
-  .about-block .pic-and-desc {
-    padding: 0;
-  }  
 
   .about-block .pic-and-desc .values {
     display: grid;
@@ -410,21 +403,25 @@ html {
 
 
 @media screen and (min-width: 1024px) {
+  .about-block .pic-and-desc {
+    padding-top: 5rem;
+  }
 
+  .about-block .pic-and-desc .profile-pic {
+    width: 20%;
+    height: 20%;
+  }
 }
 
 
 @media screen and (min-width: 1440px) {
   .layout .nav-bar-inner {
-    width: 360px;
+    width: 210px;
     height: 62%;
     font-size: 1.5rem;
   }
-}
 
-
-/* Code bits for later */
-
-.future-bg-color {
-  background-color: #ede7de;
+  .main-title {
+    font-size: 5rem;
+  }
 }

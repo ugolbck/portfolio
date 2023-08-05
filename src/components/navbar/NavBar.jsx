@@ -14,8 +14,6 @@ export default function NavBar() {
             <div className={`nav-bar-inner ${scroll ? "nav-bar-inner-border": ""}`}>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/">Hire</Link>
             </div>
         </div>
     )
